@@ -102,4 +102,7 @@ const carStore = {
   
   // Create a function named 'getTotalWorth' that gets input of 'cars' array
   // and returns the total sum of money all the cars in the store are worth
-  
+  function getTotalWorth(carStore){
+    return carStore.cars.reduce((acc, car) => acc + parseInt(car.price.slice(0, -1)), 0)
+  }
+  console.log(getTotalWorth(carStore));
